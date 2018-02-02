@@ -33,6 +33,9 @@ void ejercicio2();
 void ejercicio3();
 
 
+//metodo factorial
+int factorial(int);
+
 int main(){
 	//int numero = 0;
 
@@ -283,14 +286,43 @@ void ejercicio3(){
 	cout<< "Ingrese el limite de la serie: "<< endl;
 	cin >> limite;
 
-	int numeroInicial = 0;
-	for(int i =0; i<limite ; i++){
-		
-	}// final del for
-	
+	int numeroCatalan = 0;
+	for(int i= 0; i<limite; i++){
+		if(i == 0){
+			cout<< 1 <<" ";
+		}else{
+			//int numeroTemporal = 2 * i;
+			numeroCatalan =( factorial(2*i) ) / (factorial(i+1) * factorial(i) ) ;
+			cout<< numeroCatalan << " ";
+		}
+	}// fin del for
+
+	cout<<endl;
+
+}// fin del mensaje
 
 
-}// fin del metodo
+int factorial(int numero){
+	int factorial=1;
+	if(numero<0){
+		factorial = 0;
+	}else if(numero==0) {
+		factorial=1;
+	}else{
+     		 for (int i = 1; i <= numero; i++){
+        		 factorial = factorial*i;
+     		 }
+	}	
+
+	return factorial;
+}
+
+
+
+
+
+
+
 
 
 
