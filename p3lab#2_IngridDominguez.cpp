@@ -283,6 +283,10 @@ void ejercicio3(){
 	cout<< "Ingrese el limite de la serie: "<< endl;
 	cin >> limite;
 
+	int numeroInicial = 0;
+	for(int i =0; i<limite ; i++){
+		
+	}// final del for
 	
 
 
