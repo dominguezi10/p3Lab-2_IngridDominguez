@@ -29,6 +29,10 @@ int recursion(int);
 //segundo ejercicio
 void ejercicio2();
 
+//tercer ejercicio
+void ejercicio3();
+
+
 int main(){
 	//int numero = 0;
 
@@ -59,6 +63,10 @@ int main(){
 
 			case 2:
 				ejercicio2();
+			break;
+
+			case 3:
+				ejercicio3();
 			break;
 		}//  fin del caso
 	}// fin del while
@@ -266,6 +274,20 @@ void ejercicio2(){
 	anguloC = 180 - (anguloA + anguloB);
 	cout<< "Angulo C : "<< anguloC << endl;
 }// fin del metodo
+
+
+
+void ejercicio3(){
+	int limite  = 0;
+	cout<< "--- Ejercicio 3 ----"<< endl;
+	cout<< "Ingrese el limite de la serie: "<< endl;
+	cin >> limite;
+
+	
+
+
+}// fin del metodo
+
 
 
 
