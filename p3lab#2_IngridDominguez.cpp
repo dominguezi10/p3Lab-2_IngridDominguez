@@ -19,6 +19,13 @@ void ejercicio1();
 //ejercicio 1.2
 void ejercicio1_2();
 
+//ejercicio 1.3
+void  ejercicio1_3();
+
+
+//recursivo
+int recursion(int);
+
 int main(){
 	//int numero = 0;
 
@@ -38,6 +45,9 @@ int main(){
 
 						case 2:
 							ejercicio1_2();
+						break;
+						case 3:
+							ejercicio1_3();
 						break;
 					}// fin del los sub casos
 				}// fin caso 1
@@ -103,6 +113,7 @@ void ejercicio1(){
 void ejercicio1_2(){
 	int numeroAleatorio = 0;
 	numeroAleatorio  = rand() % 200 + 1;
+	cout<< "-- Numero Random"<< endl;
 	cout<< "El numero Aleatorio es : "<<numeroAleatorio<< endl;
 
         int acumulador = 0;
@@ -123,6 +134,62 @@ void ejercicio1_2(){
 }//fin del metodo
 
 
+void ejercicio1_3(){
+	int numero = 0;
+	cout<< " -- Numero Triangular Previo -- "<< endl;
+	cin >> numero;
+
+	//prueba de la recursion
+	int numeroPrevio =  recursion(numero);
+	cout<< "Numero previo es "<< numeroPrevio << endl;
+
+/*	int acumulador = 0;
+	for(int i = 1; i<=numero; i++){
+                acumulador = acumulador +i;
+        //      cout<< acumulador << endl;
+                if(acumulador == numero){
+                        cout<< "Es numero Triangular es el mismo numero"<< endl;
+                        break;
+                }
+        }// fin del for
+
+	if(acumulador != numero){
+		int numeroPrevio = 0;
+		for(int i){
+		}
+
+	}//fin de la condicion
+	*/
+}//fin del ejercicio 1.3
+
+
+
+
+//prueba de metodo recursivo
+int recursion(int numero){
+	//int numeroPrevio = numero;
+	int acumulador = 0;
+		
+
+        for(int i = 1; i<=numero; i++){
+                acumulador = acumulador +i;
+        //      cout<< acumulador << endl;
+                if(acumulador == numero){
+                        cout<< "El numero Triangular Previo es: "<< numero << endl;
+                        break;
+                }
+        }// fin del for
+
+
+	cout<< acumulador<< endl;
+	if(acumulador != numero){
+		recursion(numero - 1);
+	} else {
+		return numero;
+	}
+
+
+}//fin del metodo
 
 
 
