@@ -1,14 +1,23 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
+#include <math.h>
+
 
 using namespace std;
 
 //el menu 
 int menu();
 
+//menu del ejericicio 1
+int menu2();
+
 // ejercicio 1
 void ejercicio1();
 
+
+//ejercicio 1.2
+void ejercicio1_2();
 
 int main(){
 	//int numero = 0;
@@ -19,7 +28,19 @@ int main(){
 
 		switch(opcion){
 			case 1:
-				ejercicio1();
+				int opcionEjercicio1 = 1;
+				while(opcionEjercicio1>= 1 &&  opcionEjercicio1<=3){
+					opcionEjercicio1 = menu2();
+					switch(opcionEjercicio1){
+						case 1:
+							ejercicio1();
+						break;
+
+						case 2:
+							ejercicio1_2();
+						break;
+					}// fin del los sub casos
+				}// fin caso 1
 			break;
 		}//  fin del caso
 	}// fin del while
@@ -41,6 +62,21 @@ int menu(){
 }// fin del metodo del menu
 
 
+int menu2(){
+	int opcion = 0;
+	cout<<" --------- Ejercicio 1 ----------"<< endl;
+	cout<< "Ingrese su opcion: "<<endl;
+	cout<< "1.- Numero Triangular"<< endl;
+	cout<< "2.- Numero Random "<< endl;
+	cout<< "3.- Numero Triangullar Previo"<<endl;
+	cout<< "4.- Salir"<<endl;
+	cin >> opcion;
+
+	return opcion;
+
+}// fin del segundo menu
+
+
 void ejercicio1(){
 	int numero = 0;
 	int respuesta = 0;
@@ -58,11 +94,33 @@ void ejercicio1(){
 		}
 	}// fin del for
 
-	cout<< "Salio del metodo 1"<< endl;
+	cout<< "Salio del ejercicio 1.1"<< endl;
 //	return 0;
 }// fin del metodo
 
 
+
+void ejercicio1_2(){
+	int numeroAleatorio = 0;
+	numeroAleatorio  = rand() % 200 + 1;
+	cout<< "El numero Aleatorio es : "<<numeroAleatorio<< endl;
+
+        int acumulador = 0;
+        for(int i = 1; i<=numeroAleatorio; i++){
+                acumulador = acumulador +i;
+        //      cout<< acumulador << endl;
+                if(acumulador == numeroAleatorio){
+                        cout<< "Es numero Triangular"<< endl;
+                        break;
+                }
+        }// fin del for
+
+
+	if(acumulador != numeroAleatorio){
+		cout<< "El numero "<< numeroAleatorio << " no es triangular"<< endl;
+	}// fin de la condiicion
+
+}//fin del metodo
 
 
 
