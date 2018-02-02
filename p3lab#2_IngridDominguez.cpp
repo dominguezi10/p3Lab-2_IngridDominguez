@@ -223,6 +223,17 @@ void ejercicio2(){
 	resultadoC = ladoC * ladoC;
 	double sumaLadoA_B = 0;
 	sumaLadoA_B =  resultadoA + resultadoB;
+
+	int temporal =0; 
+	if(ladoA > ladoB && ladoA> ladoC){
+		temporal = ladoA;
+		ladoA  = ladoB;
+		ladoB = ladoA;
+	}else if(ladoC > ladoA && ladoC > ladoB){
+		temporal = ladoC;
+		ladoC = ladoB;
+		ladoB = temporal;
+	}
 	
 	if(sumaLadoA_B == resultadoC ){
 		cout<< "  -> Es triangulo Rectangulo" << endl;
@@ -240,7 +251,20 @@ void ejercicio2(){
 	area = sqrt(semiPerimetro *(semiPerimetro - ladoA) * (semiPerimetro - ladoB) * (semiPerimetro - ladoC));
 	cout<< "El area del Triangulo es : "<< area << endl;
 //	cout<< "Las dimensiones de sus angulos son: " << endl;
+
+	//ANGULOS
+	double anguloA = 0;
+	double anguloB = 0;
+	double anguloC = 0;
+
+	anguloA = acos( (resultadoB + (resultadoC - resultadoA) )/ ( 2*(ladoB * ladoC) )) * (180/3.14159265)  ;
+	cout<< "Angulo A : "<< anguloA << endl;
 	
+	anguloB = acos( (resultadoA +(resultadoC - resultadoB)) /(2 * (ladoA * ladoC))) * (180/ 3.14159265)   ;
+	cout<< "Angulo B : "<< anguloB << endl;
+
+	anguloC = 180 - (anguloA + anguloB);
+	cout<< "Angulo C : "<< anguloC << endl;
 }// fin del metodo
 
 
