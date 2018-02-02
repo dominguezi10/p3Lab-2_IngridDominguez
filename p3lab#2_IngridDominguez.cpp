@@ -26,6 +26,9 @@ void  ejercicio1_3();
 //recursivo
 int recursion(int);
 
+//segundo ejercicio
+void ejercicio2();
+
 int main(){
 	//int numero = 0;
 
@@ -34,7 +37,7 @@ int main(){
 		opcion = menu();
 
 		switch(opcion){
-			case 1:
+			case 1:{
 				int opcionEjercicio1 = 1;
 				while(opcionEjercicio1>= 1 &&  opcionEjercicio1<=3){
 					opcionEjercicio1 = menu2();
@@ -51,6 +54,11 @@ int main(){
 						break;
 					}// fin del los sub casos
 				}// fin caso 1
+				}// final del caso
+			break;
+
+			case 2:
+				ejercicio2();
 			break;
 		}//  fin del caso
 	}// fin del while
@@ -190,6 +198,54 @@ int recursion(int numero){
 
 
 }//fin del metodo
+
+
+//ejercicio 2
+void ejercicio2(){
+	double ladoA = 0;
+	double ladoB = 0;
+	double ladoC = 0;
+
+	cout<< "----- Segundo Ejercicio ------ " << endl;
+	cout<< "Ingrese la medida del lado A : "<<endl;
+	cin >> ladoA;
+        cout<< "Ingrese la medida del lado B : "<<endl;
+        cin >> ladoB;
+        cout<< "Ingrese la medida del lado C : "<<endl;
+        cin >> ladoC;
+
+	
+	double resultadoA = 0;
+	resultadoA = ladoA * ladoA;
+	double resultadoB = 0;
+	resultadoB = ladoB * ladoB;
+	double resultadoC = 0;
+	resultadoC = ladoC * ladoC;
+	double sumaLadoA_B = 0;
+	sumaLadoA_B =  resultadoA + resultadoB;
+	
+	if(sumaLadoA_B == resultadoC ){
+		cout<< "  -> Es triangulo Rectangulo" << endl;
+	}else{
+		cout<< "No es un triaungulo Rectangulo"<< endl;
+	}
+//	cout<< resultadoA<< " "<< resultadoB  << " "<< resultadoC<< " " << sumaLadoA_B << endl;
+
+
+	double area = 0;
+	double semiPerimetro = 0;
+	semiPerimetro =  (ladoA + ladoB + ladoC) / 2;
+
+
+	area = sqrt(semiPerimetro *(semiPerimetro - ladoA) * (semiPerimetro - ladoB) * (semiPerimetro - ladoC));
+	cout<< "El area del Triangulo es : "<< area << endl;
+//	cout<< "Las dimensiones de sus angulos son: " << endl;
+	
+}// fin del metodo
+
+
+
+
 
 
 
