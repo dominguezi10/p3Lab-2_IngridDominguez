@@ -74,7 +74,7 @@ int main(){
 		}//  fin del caso
 	}// fin del while
 	
-	cout<< "Salio del metodo!" << endl;
+	cout<< "Salio del programa!" << endl;
 }// fin del main
 
 int menu(){
@@ -317,7 +317,7 @@ int factorial(int numero){
 	return factorial;
 }
 
-
+// triangulo de pascal
 
 
 
