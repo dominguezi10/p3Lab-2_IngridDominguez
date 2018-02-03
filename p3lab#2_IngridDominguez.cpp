@@ -45,22 +45,22 @@ int main(){
 
 		switch(opcion){
 			case 1:{
-				int opcionEjercicio1 = 1;
-				while(opcionEjercicio1>= 1 &&  opcionEjercicio1<=3){
-					opcionEjercicio1 = menu2();
-					switch(opcionEjercicio1){
-						case 1:
-							ejercicio1();
-						break;
-
-						case 2:
-							ejercicio1_2();
-						break;
-						case 3:
-							ejercicio1_3();
-						break;
-					}// fin del los sub casos
-				}// fin caso 1
+					int opcionEjercicio1 = 1;
+					while(opcionEjercicio1>= 1 &&  opcionEjercicio1<=3){
+						opcionEjercicio1 = menu2();
+						switch(opcionEjercicio1){
+							case 1:
+								ejercicio1();
+							break;
+	
+							case 2:
+								ejercicio1_2();
+							break;
+							case 3:
+								ejercicio1_3();
+							break;
+						}// fin del los sub casos
+					}// fin caso 1
 				}// final del caso
 			break;
 
@@ -317,9 +317,30 @@ int factorial(int numero){
 	return factorial;
 }
 
+
+
+/*
 // triangulo de pascal
+void trianguloPascal(int limite){
+	
+	
+	for(int i = 0; i< (limite*2); i++){
 
+		for(int k =0 ; k<){
+		}
 
+		for(int j = 0; < i; j++){
+			if(j == 0 || j == (i-1)){
+				cout<< 1 << " ";
+			}else {
+				cout<< (j+ (j-1))
+			}
+		}
+
+	}// fin del for
+
+}
+*/
 
 
 
